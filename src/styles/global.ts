@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     :focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${(props) => props.theme['base-border']};
+        box-shadow: 0 0 0 2px ${(props) => props.theme['blue']};
     }
     body {
         width: 100vw;
@@ -16,9 +16,15 @@ export const GlobalStyle = createGlobalStyle`
         background: ${(props) => props.theme['base-background']};
         color: ${(props) => props.theme['base-text']};
         -webkit-font-smoothing: antialiased;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
+        overflow-x: hidden;
     }
     body, input-security, text-area, button {
-        font: 400 1rem 'Nunito', sans-serif;
+        font: 400 1rem 'Nunito Sans', sans-serif;
+        line-height: 1.6;
     }
     button {
         cursor: pointer;

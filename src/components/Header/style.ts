@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
+export const Banner = styled.header`
     width: 100vw;
     height: 18.5rem;
     background: #0B1E30;
