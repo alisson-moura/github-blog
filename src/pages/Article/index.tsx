@@ -1,10 +1,12 @@
+import ReactMarkdown from 'react-markdown'
 import { CardInfo } from "../../components/Card-Info";
-import { ArticleContainer, Container, Title, GitLink, Infos, Links } from "./style";
+import { ArticleContainer, Container, Title, GitLink, Infos, Links, TextContainer } from "./style";
 import arrowUp from '../../assets/arrow-up.svg'
 import git from '../../assets/git.svg'
 import comments from '../../assets/comment.svg'
 import back from '../../assets/chevron-left.svg'
 import calendar from '../../assets/calendar.svg'
+
 
 export function Article() {
     return (
@@ -32,6 +34,9 @@ export function Article() {
                     </Infos>
                 </ArticleContainer>
             </CardInfo>
+            <TextContainer>
+                <ReactMarkdown># Hello, *world*!</ReactMarkdown>
+            </TextContainer>
         </Container>
     )
 }

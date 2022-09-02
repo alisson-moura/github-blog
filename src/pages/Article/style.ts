@@ -4,6 +4,7 @@ export const Container = styled.div`
     max-width: 864px;
     margin: 0 auto;
 `;
+
 export const ArticleContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -58,4 +59,8 @@ export const Infos = styled.div`
         height: 24px;
     }
    }
+`
+
+export const TextContainer = styled.div`
+    padding: 40px 32px;
 `
