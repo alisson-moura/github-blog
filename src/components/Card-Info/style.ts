@@ -8,6 +8,7 @@ export const CardInfoContainer = styled.div`
     margin-top: -80px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: ${props => props.theme["radius-10"]};
+    position: relative;
     div {
         width: 100%;
         height: 100%;

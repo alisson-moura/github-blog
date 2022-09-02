@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -29,6 +30,25 @@ export const Title = styled.h2`
 `
 
 export const GitLink = styled.a`
+    cursor: pointer;
+    color: ${props => props.theme['blue']};
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    img {
+        width: 14px;
+        margin-top: -2px;
+    }
+`
+
+export const LinkBack = styled(Link)`
     cursor: pointer;
     color: ${props => props.theme['blue']};
     font-size: 12px;

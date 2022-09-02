@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Card = styled.div`
+export const Card = styled(Link)`
+    display: block;
+    text-decoration: none;
+    color: ${props => props.theme["base-text"]};
     background: ${props => props.theme['base-post']};
     padding: 32px;
     border-radius: ${props => props.theme["radius-10"]};

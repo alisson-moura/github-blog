@@ -1,12 +1,24 @@
+import ReactMarkdown from "react-markdown";
 import { Card } from "./style";
-export function Post() {
+
+interface I_Article {
+    id: number
+    title: string
+    date: string
+    content: string
+}
+interface PostProps {
+    article: I_Article
+}
+
+export function Post({ article }: PostProps) {
     return (
-        <Card>
+        <Card to={`/article/${article.id}`}>
             <header>
-                <h3>JavaScript data types and data structures</h3>
-                <span>Há 1 dia</span>
+                <h3>{article.title}</h3>
+                <span>{article.date}</span>
             </header>
-            <span>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in</span>
+            <span><ReactMarkdown children={article.content.substring(0, 140) + ' ...'} /></span>
         </Card>
     )
 }
