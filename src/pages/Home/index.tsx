@@ -14,7 +14,7 @@ export function Home() {
                     <Avatar src="https://avatars.githubusercontent.com/u/48321754?v=4" />
                     <Name>Alisson Moura</Name>
                     <GitLink target="_blank" href="https://github.com/alisson-moura">Github <img src={arrowUp} alt="" /></GitLink>
-                    <Description>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</Description>
+                    <Description>Me divertindo por aqui e aprendendo coisas novas.</Description>
                     <Infos>
                         <div>
                             <img src={git} alt="" />
@@ -39,7 +39,7 @@ export function Home() {
                 <input type="text" placeholder="Buscar conteúdo" />
             </Header>
             <Cards>
-               <Post />
+                <Post />
             </Cards>
         </Container>
     )
