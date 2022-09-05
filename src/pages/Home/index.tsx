@@ -5,11 +5,25 @@ import git from '../../assets/git.svg'
 import company from '../../assets/company.svg'
 import group from '../../assets/group.svg'
 import { Post } from "./Card";
-import { useContext } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { ProfileContext } from "../../contexts/profileContext";
 
 export function Home() {
     const { profile, articles } = useContext(ProfileContext)
+    const [filteredArticles, setFilteredArticles] = useState(articles)
+
+    function filterArticles(event: ChangeEvent<HTMLInputElement>): void {
+        const filter = event.target.value
+        if (filter) {
+            setFilteredArticles(state =>
+                [...articles.filter(article => article.title.includes(filter))])
+        } else {
+            setFilteredArticles(articles)
+        }
+    }
+
+    useEffect(() => { setFilteredArticles(articles) }, [articles])
+
 
     return (
         <Container>
@@ -44,10 +58,10 @@ export function Home() {
                             ? (`${articles.length} publicações`)
                             : (`${articles.length} publicação`)}</span>
                 </div>
-                <input type="text" placeholder="Buscar conteúdo" />
+                <input onChange={filterArticles} type="text" placeholder="Buscar conteúdo" />
             </Header>
             <Cards>
-                {articles && articles.map(article => (
+                {filteredArticles && filteredArticles.map(article => (
                     <Post key={article.id} article={article} />
                 ))}
 
