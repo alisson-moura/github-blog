@@ -38,15 +38,19 @@ export function Home() {
             <Header>
                 <div>
                     <h3>Publicações</h3>
-                    <span>6 publicações</span>
+                    <span>{articles.length == 0
+                        ? (`nada publicado ainda`)
+                        : articles.length > 1
+                            ? (`${articles.length} publicações`)
+                            : (`${articles.length} publicação`)}</span>
                 </div>
                 <input type="text" placeholder="Buscar conteúdo" />
             </Header>
             <Cards>
                 {articles && articles.map(article => (
-                    <Post key={article.id} article={article}/>
+                    <Post key={article.id} article={article} />
                 ))}
-                
+
             </Cards>
         </Container>
     )

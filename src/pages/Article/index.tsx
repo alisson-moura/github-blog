@@ -1,4 +1,3 @@
-import ReactMarkdown from 'react-markdown'
 import { CardInfo } from "../../components/Card-Info";
 import { ArticleContainer, Container, Title, GitLink, Infos, Links, TextContainer, LinkBack } from "./style";
 import arrowUp from '../../assets/arrow-up.svg'
@@ -8,8 +7,8 @@ import back from '../../assets/chevron-left.svg'
 import calendar from '../../assets/calendar.svg'
 import { useContext } from 'react';
 import { ProfileContext } from '../../contexts/profileContext';
-import { Link, useParams } from 'react-router-dom';
-import remarkGfm from 'remark-gfm';
+import { useParams } from 'react-router-dom';
+import Markdown from '../../components/Markdown';
 
 
 export function Article() {
@@ -43,7 +42,7 @@ export function Article() {
                 </ArticleContainer>
             </CardInfo>
             <TextContainer>
-                <ReactMarkdown remarkPlugins={[remarkGfm]} >{article.content}</ReactMarkdown>
+                <Markdown markdown={article.content} />
             </TextContainer>
         </Container>
     )
