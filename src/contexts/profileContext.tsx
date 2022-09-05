@@ -33,7 +33,7 @@ export function ProfileProvider({ children }: React.PropsWithChildren) {
     const [articles, setArticles] = useState<I_Article[]>([] as I_Article[])
 
     async function getProfile(): Promise<void> {
-        const { data } = await apiClient.get('user')
+        const { data } = await apiClient.get('users/alisson-moura')
         setProfile({
             name: data.name,
             bio: data.bio,
