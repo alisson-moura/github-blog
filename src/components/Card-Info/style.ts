@@ -6,7 +6,7 @@ export const CardInfoContainer = styled.div`
     width: 100%;
     min-height: 100px;
     margin-top: -80px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
     border-radius: ${props => props.theme["radius-10"]};
     position: relative;
     div {

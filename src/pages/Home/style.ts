@@ -83,7 +83,7 @@ export const Header = styled.div`
         border: none;
         color: ${props => props.theme['base-text']};
         &::placeholder {
-            color:  ${props => props.theme['base-label']};
+            color:  #6272A4;
         }
    }
 `
